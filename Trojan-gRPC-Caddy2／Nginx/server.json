@@ -9,14 +9,14 @@
       "settings": {
         "clients": [
           {
-            "password": "" // 填写你的 password
+            "password": "" // Choose Password
           }
         ]
       },
       "streamSettings": {
         "network": "grpc",
         "grpcSettings": {
-          "serviceName": "" // 填写你的 ServiceName
+          "serviceName": "" // Fill in your ServiceName
         }
       }
     }

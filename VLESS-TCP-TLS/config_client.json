@@ -25,7 +25,7 @@
             "settings": {
                 "vnext": [
                     {
-                        "address": "1.2.3.4",
+                        "address": "SERVER_IP",
                         "port": 443,
                         "users": [
                             {
@@ -41,7 +41,7 @@
                 "network": "tcp",
                 "security": "tls",
                 "tlsSettings": {
-                    "serverName": "example.domain",
+                    "serverName": "YOUR_DOMAIN_NAME",
                     "allowInsecure": false,
                     "alpn": [
                         "h2",

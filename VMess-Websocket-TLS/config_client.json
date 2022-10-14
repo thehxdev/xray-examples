@@ -37,11 +37,11 @@
             "settings": {
                 "vnext": [
                     {
-                        "address": "",
+                        "address": "SERVER_IP",
                         "port": 1234,
                         "users": [
                             {
-                                "id": "",
+                                "id": "UUID",
                                 "security": "none"
                             }
                         ]

@@ -12,11 +12,6 @@
                 "udp": true,
                 "ip": "127.0.0.1"
             }
-        },
-        {
-            "listen": "127.0.0.1",
-            "port": "1081",
-            "protocol": "http"
         }
     ],
     "outbounds": [
@@ -25,11 +20,11 @@
             "settings": {
                 "vnext": [
                     {
-                        "address": "1.2.3.4",
+                        "address": "SERVER_IP",
                         "port": 443,
                         "user": [
                             {
-                                "id": "",
+                                "id": "UUID",
                                 "encryption": "none",
                                 "level": 0
                             }
@@ -41,7 +36,7 @@
                 "network": "tcp",
                 "security": "tls",
                 "tlsSettings": {
-                    "serverName": "example.domain",
+                    "serverName": "YOUR_DOMAIN_NAME",
                     "allowInsecure": false,
                     "alpn": [
                         "h2",

@@ -15,8 +15,8 @@
   "tlsSettings": {
    "certificates": [
     {
-     "certificateFile": "fullchain.crt", // 使用真实证书
-     "keyFile": "private.key"
+     "certificateFile": "/path/to/fullchain.crt", // Use a real certificate file
+     "keyFile": "/path/to/private.key"
     }
    ]
   }

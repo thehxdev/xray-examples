@@ -25,11 +25,11 @@
             "settings": {
                 "vnext": [
                     {
-                        "address": "1.2.3.4",
-                        "port": 1234,
+                        "address": "YOUR_SERVER_IP",
+                        "port": PORT,
                         "users": [
                             {
-                                "id": "",
+                                "id": "UUID",
                                 "encryption": "none",
                                 "level": 0
                             }

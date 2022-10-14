@@ -5,17 +5,19 @@
     "inbounds": [
         {
             "protocol": "vless",
-            "port": "{{ port }}",
+            "port": PORT,
             "settings": {
                 "decryption":"none",
                 "clients": [
-                    {"id": "{{  }}"}
+                    {
+						"id": "UUID"
+					}
                 ]
             },
             "streamSettings": {
                 "network": "kcp",
                 "kcpSettings": {
-                    "seed": "{{ seed }}"
+                    "seed": "SEED"
                 }
             }
         }

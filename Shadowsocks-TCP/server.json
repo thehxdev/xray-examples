@@ -21,7 +21,7 @@
             "protocol": "shadowsocks",
             "settings": {
                 "method": "chacha20-ietf-poly1305",
-                "password": "{{ password }}"
+                "password": "PASSWORD"
         },
             "streamSettings": {
                 "network": "tcp"

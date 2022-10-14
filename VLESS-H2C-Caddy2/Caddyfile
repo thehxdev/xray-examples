@@ -1,7 +1,9 @@
+# change xx.com to your domain
 xx.com {
     root * /var/www
     file_server
     
+	# change /path to PATH that defined in server.json
     reverse_proxy /path 127.0.0.1:2001 {
         transport http {
             versions h2c

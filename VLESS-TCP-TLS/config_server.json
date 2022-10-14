@@ -10,7 +10,7 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "",
+                        "id": "UUID",
                         "level": 0,
                         "email": "love@example.com"
                     }
@@ -30,7 +30,7 @@
                 "network": "tcp",
                 "security": "tls",
                 "tlsSettings": {
-                    "serverName": "example.domain",
+                    "serverName": "YOUR_DOMAIN_NAME",
                     "alpn": [
                         "h2",
                         "http/1.1"

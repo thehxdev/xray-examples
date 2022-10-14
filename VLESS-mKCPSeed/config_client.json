@@ -18,11 +18,11 @@
             "settings": {
                 "vnext": [
                     {
-                        "address": "{{ host }}",
-                        "port": "{{ port }}",
+                        "address": "YOUR_SERVER_IP",
+                        "port": SERVER_PORT,
                         "users": [
                             {
-                                "id": "{{ uuid }}",
+                                "id": "UUID",
                                 "encryption": "none"
                             }
                         ]
@@ -32,7 +32,7 @@
             "streamSettings": {
                 "network": "kcp",
                 "kcpSettings": {
-                    "seed": "{{ seed }}"
+                    "seed": "SEED"
                 }
             }
         }

@@ -8,11 +8,6 @@
         "auth":"noauth",
         "udp":true
       }
-    },
-    {
-      "port":"1081",
-      "protocol":"http",
-      "settings":{}
     }
   ],
   "outbounds":[
@@ -21,11 +16,11 @@
       "settings":{
         "vnext":[
           {
-            "address":"xx.com",
+            "address":"xx.com", // Your server ip or domain name
             "port":443,
             "users":[
               {
-                "id":"",
+                "id":"", // UUID
                 "encryption":"none"
               }
             ]
@@ -37,9 +32,9 @@
         "security":"tls",
         "httpSettings":{
           "host":[
-            "xx.com"
+            "xx.com" // Your domain
           ],
-          "path":"/path"
+          "path":"/path" // path in server.json
         }
       }
     },

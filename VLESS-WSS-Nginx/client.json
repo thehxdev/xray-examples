@@ -25,7 +25,7 @@
             "port": 443,
             "users": [
               {
-                "id": "", //填写你的 UUID
+                "id": "UUID",
                 "encryption": "none"
               }
             ]
@@ -36,7 +36,7 @@
         "network": "ws",
         "security": "tls",
         "wsSettings": {
-          "path": "?ed=2048" //?ed=2048 前面填写你的 path
+          "path": "/wsPATH?ed=2048" //Fill in your path before ?ed=2048
         }
       }
     },

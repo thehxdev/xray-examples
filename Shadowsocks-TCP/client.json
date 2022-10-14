@@ -37,10 +37,10 @@
             "settings": {
                 "servers": [
                     {
-                        "address": "{{ host }}",
-                        "port": "{{ port }}",
+                        "address": "SERVER ADDRESS",
+                        "port": "PORT",
                         "method": "chacha20-ietf-poly1305",
-                        "password": "{{ password}}"
+                        "password": "PASSWORD"
                     }
                 ]
             },
