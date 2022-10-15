@@ -17,17 +17,21 @@
     "inbounds": [
         {
             "listen": "0.0.0.0",
-            "port": 1234,
+            "port": 443,
             "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": ""
+                        "id": "",
+                        "alterid": 0
                     }
                 ]
             },
             "streamSettings": {
                 "network": "ws",
+                "wsSettings": {
+                    "path": ""
+                },
                 "security": "none"
             }
         }
