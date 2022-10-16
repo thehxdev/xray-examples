@@ -9,7 +9,7 @@
             "settings": {
                 "clients": [
                     {
-                        "password":"YOUR_PASSWORD"
+                        "password": ""
                     }
                 ]
             },
@@ -22,8 +22,8 @@
                     ],
                     "certificates": [
                         {
-                            "certificateFile": "/path/to/fullchain.crt",
-                            "keyFile": "/path/to/private.key"
+                            "certificateFile": "",
+                            "keyFile": ""
                         }
                     ]
                 }
