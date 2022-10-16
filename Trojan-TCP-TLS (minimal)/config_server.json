@@ -9,8 +9,7 @@
             "settings": {
                 "clients": [
                     {
-                        "password":"YOUR_PASSWORD",
-                        "email": "love@example.com"
+                        "password":"YOUR_PASSWORD"
                     }
                 ]
             },
