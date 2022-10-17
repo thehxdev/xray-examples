@@ -9,16 +9,16 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "",
+                        "id": ""
                     }
                 ],
-                "decryption": "none",
+                "decryption": "none"
             },
             "streamSettings": {
                 "network": "ws",
-				"wsSettins": {
-					"path": ""
-				}
+                "wsSettins": {
+                    "path": ""
+                },
                 "security": "tls",
                 "tlsSettings": {
                     "certificates": [
