@@ -9,9 +9,7 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "UUID",
-                        "level": 0,
-                        "email": "love@example.com"
+                        "id": ""
                     }
                 ],
                 "decryption": "none",
@@ -30,8 +28,8 @@
                     ],
                     "certificates": [
                         {
-                            "certificateFile": "/path/to/fullchain.crt",
-                            "keyFile": "/path/to/private.key"
+                            "certificateFile": "",
+                            "keyFile": ""
                         }
                     ]
                 }

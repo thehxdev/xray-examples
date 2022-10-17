@@ -1,24 +1,24 @@
 {
- "port": 443,
- "protocol": "vmess",
- "settings": {
-  "clients": [
-   {
-    "id": ""
-   }
-  ]
- },
- "streamSettings": {
-  "network": "quic",
-  "quicSettings": {},
-  "security": "tls",
-  "tlsSettings": {
-   "certificates": [
-    {
-     "certificateFile": "/path/to/fullchain.crt", // Use a real certificate file
-     "keyFile": "/path/to/private.key"
-    }
-   ]
-  }
- }
+	"port": 8080,
+	"protocol": "vmess",
+	"settings": {
+		"clients": [
+			{
+				"id": ""
+			}
+		]
+	},
+	"streamSettings": {
+		"network": "quic",
+		"quicSettings": {},
+		"security": "tls",
+		"tlsSettings": {
+			"certificates": [
+				{
+					"certificateFile": "",
+					 "keyFile": ""
+				}
+			]
+		}
+	}
 }

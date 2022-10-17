@@ -9,9 +9,7 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "UUID",
-                        "level": 0,
-                        "email": "love@example.com"
+                        "id": ""
                     }
                 ],
                 "decryption": "none",
@@ -20,7 +18,7 @@
                         "dest": 80
                     },
                     {
-                        "path": "/webPAHT",
+                        "path": "",
                         "dest": 1234,
                         "xver": 1
                     }
@@ -35,8 +33,8 @@
                     ],
                     "certificates": [
                         {
-                            "certificateFile": "/path/to/fullchain.crt",
-                            "keyFile": "/path/to/private.key" 
+                            "certificateFile": "",
+                            "keyFile": "" 
                         }
                     ]
                 }
@@ -49,9 +47,7 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "UUID2",
-                        "level": 0,
-                        "email": "love@example.com"
+                        "id": ""
                     }
                 ],
                 "decryption": "none"
@@ -61,7 +57,7 @@
                 "security": "none",
                 "wsSettings": {
                     "acceptProxyProtocol": true, // If you are using reverse proxy with Nginx/Caddy2 remove this line.
-                    "path": "/wsPATH" 
+                    "path": "" 
                 }
             }
         }
