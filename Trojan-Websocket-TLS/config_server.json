@@ -17,7 +17,7 @@
                 "network": "ws",
                 "wsSettings": {
                     "path": ""
-				}
+				},
                 "security": "tls",
 				"tlsSettings": {
                     "certificates": [
