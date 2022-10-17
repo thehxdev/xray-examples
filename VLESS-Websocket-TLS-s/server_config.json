@@ -10,15 +10,9 @@
                 "clients": [
                     {
                         "id": "",
-                        "level": 0,
                     }
                 ],
                 "decryption": "none",
-                "fallbacks": [
-                    {
-                        "dest": 80
-                    }
-                ]
             },
             "streamSettings": {
                 "network": "ws",
