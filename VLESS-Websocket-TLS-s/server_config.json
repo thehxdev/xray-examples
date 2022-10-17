@@ -4,39 +4,33 @@
     },
     "inbounds": [
         {
-            "listen": "0.0.0.0",
-            "port": 443,
+            "port": 8080,
             "protocol": "vless",
             "settings": {
                 "clients": [
                     {
                         "id": "",
+                        "level": 0,
                     }
                 ],
                 "decryption": "none",
                 "fallbacks": [
                     {
-                        "dest": 8001
-                    },
-                    {
-                        "alpn": "h2",
-                        "dest": 8002
+                        "dest": 80
                     }
                 ]
             },
             "streamSettings": {
-                "network": "tcp",
+                "network": "ws",
+				"wsSettins": {
+					"path": ""
+				}
                 "security": "tls",
                 "tlsSettings": {
-                    "serverName": "YOUR_DOMAIN_NAME",
-                    "alpn": [
-                        "h2",
-                        "http/1.1"
-                    ],
                     "certificates": [
                         {
-                            "certificateFile": "/path/to/fullchain.crt",
-                            "keyFile": "/path/to/private.key"
+                            "certificateFile": "",
+                            "keyFile": ""
                         }
                     ]
                 }
@@ -45,8 +39,7 @@
     ],
     "outbounds": [
         {
-            "protocol": "freedom",
-            "tag": "direct"
+            "protocol": "freedom"
         }
     ]
 }
