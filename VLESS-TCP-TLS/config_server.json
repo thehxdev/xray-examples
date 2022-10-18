@@ -4,7 +4,6 @@
     },
     "inbounds": [
         {
-            "listen": "0.0.0.0",
             "port": 443,
             "protocol": "vless",
             "settings": {
@@ -28,15 +27,14 @@
                 "network": "tcp",
                 "security": "tls",
                 "tlsSettings": {
-                    "serverName": "YOUR_DOMAIN_NAME",
                     "alpn": [
                         "h2",
                         "http/1.1"
                     ],
                     "certificates": [
                         {
-                            "certificateFile": "/path/to/fullchain.crt",
-                            "keyFile": "/path/to/private.key"
+                            "certificateFile": "",
+                            "keyFile": ""
                         }
                     ]
                 }
