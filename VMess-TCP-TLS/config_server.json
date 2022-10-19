@@ -16,8 +16,7 @@
     },
     "inbounds": [
         {
-            "listen": "0.0.0.0",
-            "port": 1234,
+            "port": 8080,
             "protocol": "vmess",
             "settings": {
                 "clients": [
@@ -32,8 +31,8 @@
                 "tlsSettings": {
                     "certificates": [
                         {
-                            "certificateFile": "/path/to/certificate.crt",
-                            "keyFile": "/path/to/key.key"
+                            "certificateFile": "",
+                            "keyFile": ""
                         }
                     ]
                 }
