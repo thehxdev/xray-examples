@@ -25,7 +25,7 @@
             "port": 443,
             "users": [
               {
-                "id": "", //Fill in your UUID
+                "id": "",
                 "encryption": "none"
               }
             ]
