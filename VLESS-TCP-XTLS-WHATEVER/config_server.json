@@ -9,10 +9,8 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "UUID",
-                        "flow": "xtls-rprx-direct",
-                        "level": 0,
-                        "email": "love@example.com"
+                        "id": "",
+                        "flow": "xtls-rprx-direct"
                     }
                 ],
                 "decryption": "none",
@@ -47,8 +45,8 @@
                     ],
                     "certificates": [
                         {
-                            "certificateFile": "/path/to/fullchain.crt", 
-                            "keyFile": "/path/to/private.key" 
+                            "certificateFile": "", 
+                            "keyFile": ""
                         }
                     ]
                 }
@@ -61,9 +59,7 @@
             "settings": {
                 "clients": [
                     {
-                        "password": "PASSWORD",
-                        "level": 0,
-                        "email": "love@example.com"
+                        "password": ""
                     }
                 ],
                 "fallbacks": [
@@ -87,9 +83,8 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "UUID", 
-                        "level": 0,
-                        "email": "love@example.com"
+                        "id": "", 
+                        "level": 0
                     }
                 ],
                 "decryption": "none"
@@ -110,9 +105,8 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "UUID",
-                        "level": 0,
-                        "email": "love@example.com"
+                        "id": "",
+                        "level": 0
                     }
                 ]
             },
