@@ -20,12 +20,12 @@
                         "xver": 1
                     },
                     {
-                        "path": "/vless,ws,tls PATH",
+                        "path": "",
                         "dest": 10881,
                         "xver": 1
                     },
                     {
-                        "path": "/vmess,ws,tls PATH",
+                        "path": "",
                         "dest": 20881,
                         "xver": 1
                     }
