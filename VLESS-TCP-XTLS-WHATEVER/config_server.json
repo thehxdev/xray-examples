@@ -16,22 +16,17 @@
                 "decryption": "none",
                 "fallbacks": [
                     {
-                        "dest": 1310, // Falling back to Xray's Trojan protocol by default
+                        "dest": 10801,
                         "xver": 1
                     },
                     {
-                        "path": "/websocket", // Must be replaced with a custom PATH
-                        "dest": 1234,
+                        "path": "/vless,ws,tls PATH",
+                        "dest": 10881,
                         "xver": 1
                     },
                     {
-                        "path": "/vmesstcp", // Must be replaced with a custom PATH
-                        "dest": 2345,
-                        "xver": 1
-                    },
-                    {
-                        "path": "/vmessws", //Must be replaced with a custom PATH
-                        "dest": 3456,
+                        "path": "/vmess,ws,tls PATH",
+                        "dest": 20881,
                         "xver": 1
                     }
                 ]
@@ -53,7 +48,7 @@
             }
         },
         {
-            "port": 1310,
+            "port": 10801,
             "listen": "127.0.0.1",
             "protocol": "trojan",
             "settings": {
@@ -64,7 +59,7 @@
                 ],
                 "fallbacks": [
                     {
-                        "dest": 80 // Or fall back to other proxies that are also anti-probe
+                        "dest": 80
                     }
                 ]
             },
@@ -77,14 +72,13 @@
             }
         },
         {
-            "port": 1234,
+            "port": 10881,
             "listen": "127.0.0.1",
             "protocol": "vless",
             "settings": {
                 "clients": [
                     {
-                        "id": "", 
-                        "level": 0
+                        "id": ""
                     }
                 ],
                 "decryption": "none"
@@ -93,49 +87,19 @@
                 "network": "ws",
                 "security": "none",
                 "wsSettings": {
-                    "acceptProxyProtocol": true, // If you are using reverse proxy with Nginx/Caddy2 remove this line.
-                    "path": "/wsPATH" 
-                }
-            }
-        },
-        {
-            "port": 2345,
-            "listen": "127.0.0.1",
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "",
-                        "level": 0
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "tcp",
-                "security": "none",
-                "tcpSettings": {
                     "acceptProxyProtocol": true,
-                    "header": {
-                        "type": "http",
-                        "request": {
-                            "path": [
-                                "/vmesstcp" // It must be replaced with a custom PATH, which needs to be consistent with the diversion
-                            ]
-                        }
-                    }
+                    "path": "" 
                 }
             }
         },
         {
-            "port": 3456,
+            "port": 20881,
             "listen": "127.0.0.1",
             "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": "UUID",
-                        "level": 0,
-                        "email": "love@example.com"
+                        "id": ""
                     }
                 ]
             },
@@ -143,8 +107,8 @@
                 "network": "ws",
                 "security": "none",
                 "wsSettings": {
-                    "acceptProxyProtocol": true, // If you are using reverse proxy with Nginx/Caddy2 remove this line.
-                    "path": "/wsPATH" 
+                    "acceptProxyProtocol": true,
+                    "path": ""
                 }
             }
         }

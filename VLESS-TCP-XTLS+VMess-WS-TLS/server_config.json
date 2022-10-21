@@ -1,0 +1,72 @@
+{
+	"log": {
+		"loglevel": "warning"
+	},
+	"inbounds": [
+		{
+			"port": 443,
+			"protocol": "vless",
+			"settings": {
+				"clients": [
+					{
+						"id": "",
+						"flow": "xtls-rprx-direct"
+					}
+				],
+				"decryption": "none",
+				"fallbacks": [
+					{
+						"dest": 80
+					},
+					{
+						"path": "",
+						"dest": 31244,
+						"xver": 1
+					}
+				]
+			},
+			"streamSettings": {
+				"network": "tcp",
+				"security": "xtls",
+				"xtlsSettings": {
+					"alpn": [
+						"http/1.1"
+					],
+					"certificates": [
+						{
+							"certificateFile": "", 
+							"keyFile": ""
+						}
+					]
+				}
+			}
+		},
+		{
+			"port": 31244,
+			"listen": "127.0.0.1",
+			"protocol": "vmess",
+			"settings": {
+				"clients": [
+					{
+						"id": "",
+						"level": 0
+					}
+				]
+			},
+			"streamSettings": {
+				"network": "ws",
+				"security": "none",
+				"wsSettings": {
+					"acceptProxyProtocol": true,
+					"path": ""
+				}
+			}
+		}
+	],
+	"outbounds": [
+		{
+			"protocol": "freedom"
+		}
+	]
+}
+
