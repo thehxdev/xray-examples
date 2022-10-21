@@ -40,8 +40,8 @@
                     ],
                     "certificates": [
                         {
-                            "certificateFile": "", 
-                            "keyFile": ""
+                            "certificateFile": "/ssl/xray.crt",
+                            "keyFile": "/ssl/xray.key"
                         }
                     ]
                 }
