@@ -10,7 +10,8 @@
       "settings": {
         "clients": [
           {
-            "id": ""
+            "id": "",
+			"email": "1@admin"
           }
         ],
         "decryption": "none"
