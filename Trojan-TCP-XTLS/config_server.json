@@ -1,6 +1,8 @@
 {
     "log": {
-        "loglevel": "debug"
+        "loglevel": "warning",
+		"access": "/var/log/xray/access.log",
+		"error": "/var/log/xray/error.log"
     },
     "inbounds": [
         {
@@ -9,19 +11,9 @@
             "settings": {
                 "clients": [
                     {
-                        "password":"PASSWORD",  // Choose password
+                        "password":"",
+						"email": "1@admin",
                         "flow": "xtls-rprx-direct"
-                    }
-                ],
-                "fallbacks": [
-                    {
-                        "dest": "/dev/shm/default.sock",
-                        "xver": 1
-                    },
-                    {
-                        "alpn": "h2",
-                        "dest": "/dev/shm/h2c.sock",
-                        "xver": 1
                     }
                 ]
             },
@@ -35,12 +27,10 @@
                     ],
                     "certificates": [
                         {
-                            "certificateFile": "/path/to/cert",  // Certificate file absolute directory
-                            "keyFile": "/path/to/key",  // Absolute directory for key file
-                            "ocspStapling": 3600  // Verification period 3600 seconds
+                            "certificateFile": "",
+                            "keyFile": ""
                         }
-                    ],
-                    "minVersion": "1.2"  // TLS version
+                    ]
                 }
             }
         }
