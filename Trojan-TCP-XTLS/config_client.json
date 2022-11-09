@@ -4,7 +4,7 @@
     },
     "inbounds": [
         {
-            "port": 1080,
+            "port": 3080,
             "listen": "127.0.0.1",
             "protocol": "socks",
             "settings": {
@@ -12,7 +12,7 @@
             }
         },
         {
-            "port": 1081,
+            "port": 3081,
             "protocol": "http",
             "sniffing": {
               "enabled": true,
@@ -29,10 +29,10 @@
             "settings": {
                 "servers": [
                     {
-                        "address": "example.com",  //your domain name or server IP
-                        "flow": "xtls-rprx-direct",  // in Linux or Android can be changed to "xtls-rprx-splice"
+                        "address": "",
+                        "flow": "xtls-rprx-direct",
                         "port": 443,
-                        "password": "YOUR_PASSWORD"
+                        "password": ""
                     }
                 ]
             },
@@ -40,7 +40,7 @@
                 "network": "tcp",
                 "security": "xtls",
                 "xtlsSettings": {
-                    "serverName": "EXAMPLE.COM"  // Your domain name
+                    "serverName": ""
                 }
             }
         }
