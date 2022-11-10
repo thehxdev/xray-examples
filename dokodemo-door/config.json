@@ -1,0 +1,22 @@
+{
+	"inbounds": [
+		{
+			"port": 8080,
+			"listen": "0.0.0.0",
+			"protocol": "dokodemo-door",
+			"settings": {
+				"address": "",
+				"port": 443,
+				"network": "tcp,udp",
+				"timeout": 0,
+				"followRedirect": false,
+				"userLevel": 0
+			}
+		}
+	],
+	"outbounds": [
+		{
+			"protocol": "freedom"
+		}
+	]
+}
