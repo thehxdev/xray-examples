@@ -1,8 +1,8 @@
 {
     "log": {
         "loglevel": "warning",
-		"access": "/var/log/xray/access.log",
-		"error": "/var/log/xray/error.log"
+        "access": "/var/log/xray/access.log",
+        "error": "/var/log/xray/error.log"
     },
     "inbounds": [
         {
@@ -12,7 +12,7 @@
                 "clients": [
                     {
                         "password": "",
-						"email": "1@admin"
+                        "email": "1@admin"
                     }
                 ]
             },
@@ -20,9 +20,9 @@
                 "network": "ws",
                 "wsSettings": {
                     "path": ""
-				},
+                },
                 "security": "tls",
-				"tlsSettings": {
+                "tlsSettings": {
                     "certificates": [
                         {
                             "certificateFile": "",
