@@ -1,121 +1,121 @@
 {
-	"log": {
-		"loglevel": "warning"
-	},
-	"inbounds": [
-		{
-			"port": 443,
-			"protocol": "vless",
-			"settings": {
-				"clients": [
-					{
-						"id": "",
-						"flow": "xtls-rprx-direct"
-					}
-				],
-				"decryption": "none",
-				"fallbacks": [
-					{
-						"dest": 10801,
-						"xver": 1
-					},
-					{
-						"path": "",
-						"dest": 10881,
-						"xver": 1
-					},
-					{
-						"path": "",
-						"dest": 20881,
-						"xver": 1
-					}
-				]
-			},
-			"streamSettings": {
-				"network": "tcp",
-				"security": "xtls",
-				"xtlsSettings": {
-					"alpn": [
-						"http/1.1"
-					],
-					"certificates": [
-						{
-							"certificateFile": "/ssl/xray.crt",
-							"keyFile": "/ssl/xray.key"
-						}
-					]
-				}
-			}
-		},
-		{
-			"port": 10801,
-			"listen": "127.0.0.1",
-			"protocol": "trojan",
-			"settings": {
-				"clients": [
-					{
-						"password": ""
-					}
-				],
-				"fallbacks": [
-					{
-						"dest": 80
-					}
-				]
-			},
-			"streamSettings": {
-				"network": "tcp",
-				"security": "none",
-				"tcpSettings": {
-					"acceptProxyProtocol": true
-				}
-			}
-		},
-		{
-			"port": 10881,
-			"listen": "127.0.0.1",
-			"protocol": "vless",
-			"settings": {
-				"clients": [
-					{
-						"id": ""
-					}
-				],
-				"decryption": "none"
-			},
-			"streamSettings": {
-				"network": "ws",
-				"security": "none",
-				"wsSettings": {
-					"acceptProxyProtocol": true,
-					"path": "" 
-				}
-			}
-		},
-		{
-			"port": 20881,
-			"listen": "127.0.0.1",
-			"protocol": "vmess",
-			"settings": {
-				"clients": [
-					{
-						"id": ""
-					}
-				]
-			},
-			"streamSettings": {
-				"network": "ws",
-				"security": "none",
-				"wsSettings": {
-					"acceptProxyProtocol": true,
-					"path": ""
-				}
-			}
-		}
-	],
-	"outbounds": [
-		{
-			"protocol": "freedom"
-		}
-	]
+    "log": {
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+            "port": 443,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "",
+                        "flow": "xtls-rprx-direct"
+                    }
+                ],
+                "decryption": "none",
+                "fallbacks": [
+                    {
+                        "dest": 10801,
+                        "xver": 1
+                    },
+                    {
+                        "path": "",
+                        "dest": 10881,
+                        "xver": 1
+                    },
+                    {
+                        "path": "",
+                        "dest": 20881,
+                        "xver": 1
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "xtls",
+                "xtlsSettings": {
+                    "alpn": [
+                        "http/1.1"
+                    ],
+                    "certificates": [
+                        {
+                            "certificateFile": "/ssl/xray.crt",
+                            "keyFile": "/ssl/xray.key"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "port": 10801,
+            "listen": "127.0.0.1",
+            "protocol": "trojan",
+            "settings": {
+                "clients": [
+                    {
+                        "password": ""
+                    }
+                ],
+                "fallbacks": [
+                    {
+                        "dest": 80
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "none",
+                "tcpSettings": {
+                    "acceptProxyProtocol": true
+                }
+            }
+        },
+        {
+            "port": 10881,
+            "listen": "127.0.0.1",
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": ""
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "none",
+                "wsSettings": {
+                    "acceptProxyProtocol": true,
+                    "path": "" 
+                }
+            }
+        },
+        {
+            "port": 20881,
+            "listen": "127.0.0.1",
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": ""
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "none",
+                "wsSettings": {
+                    "acceptProxyProtocol": true,
+                    "path": ""
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
 }
