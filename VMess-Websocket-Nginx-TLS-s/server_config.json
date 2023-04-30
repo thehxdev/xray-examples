@@ -28,26 +28,12 @@
     ],
     "outbounds": [
         {
-            "tag": "direct",
             "protocol": "freedom",
-            "settings": {}
+            "tag": "direct"
         },
         {
-            "tag": "blocked",
             "protocol": "blackhole",
-            "settings": {}
+            "tag": "block"
         }
-    ],
-    "routing": {
-        "domainStrategy": "AsIs",
-        "rules": [
-            {
-                "type": "field",
-                "ip": [
-                    "geoip:private"
-                ],
-                "outboundTag": "blocked"
-            }
-        ]
-    }
+    ]
 }

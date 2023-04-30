@@ -6,7 +6,7 @@
     },
     "inbounds": [
         {
-            "port": 8080,
+            "port": 443,
             "protocol": "trojan",
             "settings": {
                 "clients": [
@@ -35,7 +35,12 @@
     ],
     "outbounds": [
         {
-            "protocol": "freedom"
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
         }
     ]
 }

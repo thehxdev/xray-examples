@@ -55,13 +55,13 @@
                 "security": "reality",
                 "realitySettings": {
                     "show": false,
-                    "dest": "digikala.com:443",
+                    "dest": "eset.com:443",
                     "xver": 0,
                     "maxTimeDiff": 0,
                     "minClientVer": "1.8.0",
                     "serverNames": [
-                        "digikala.com",
-                        "www.digikala.com"
+                        "eset.com",
+                        "www.eset.com"
                     ],
                     "privateKey": "",
                     "shortIds": [
@@ -81,7 +81,8 @@
                 "enabled": true,
                 "destOverride": [
                     "http",
-                    "tls"
+                    "tls",
+                    "quic"
                 ]
             }
         }

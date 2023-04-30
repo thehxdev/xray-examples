@@ -6,20 +6,20 @@
     },
     "inbounds": [
         {
-            "port": 8080,
+            "port": 443,
             "protocol": "vless",
             "settings": {
                 "clients": [
                     {
                         "id": "",
-                        "email": "1@admin"
+                        "email": "admin"
                     }
                 ],
                 "decryption": "none"
             },
             "streamSettings": {
                 "network": "ws",
-                "wsSettins": {
+                "wsSettings": {
                     "path": ""
                 },
                 "security": "tls",
@@ -36,7 +36,12 @@
     ],
     "outbounds": [
         {
-            "protocol": "freedom"
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
         }
     ]
 }

@@ -56,7 +56,7 @@
                 "network": "ws",
                 "security": "none",
                 "wsSettings": {
-                    "acceptProxyProtocol": true, // If you are using reverse proxy with Nginx/Caddy2 remove this line.
+                    "acceptProxyProtocol": true,
                     "path": "" 
                 }
             }
