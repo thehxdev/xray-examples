@@ -36,26 +36,7 @@
             "localhost"
         ]
     },
-    "inbounds": [
-        {
-            "listen": "0.0.0.0",
-            "port": 443,
-            "protocol": "",
-            "settings": {
-                "clients": []
-            },
-            "streamSettings": {
-                "network": ""
-            },
-            "sniffing": {
-                "enabled": true,
-                "destOverride": [
-                    "http",
-                    "tls"
-                ]
-            }
-        }
-    ],
+    "inbounds": [],
     "outbounds": [
         {
             "protocol": "freedom",
