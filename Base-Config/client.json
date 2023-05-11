@@ -96,7 +96,6 @@
             {
                 "domain": [
                     "regexp:.*\\.ir$",
-                    "*.fgbbot.com",
                     "snapp",
                     "digikala",
                     "tapsi",
