@@ -1,0 +1,140 @@
+{
+    "log": {
+        "loglevel": "warning"
+    },
+    "dns": {
+        "hosts": {
+            "domain:googleapis.cn": "googleapis.com"
+        },
+        "servers": [
+            "https+local://cloudflare-dns.com/dns-query"
+        ]
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "enabled": true
+            },
+            "tag": "socks"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 10809,
+            "protocol": "http",
+            "settings": {
+                "userLevel": 8
+            },
+            "tag": "http"
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {},
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+                "response": {
+                    "type": "http"
+                }
+            },
+            "tag": "block"
+        }
+    ],
+    "policy": {
+        "levels": {
+            "8": {
+                "connIdle": 300,
+                "downlinkOnly": 1,
+                "handshake": 4,
+                "uplinkOnly": 1
+            }
+        },
+        "system": {
+            "statsOutboundUplink": true,
+            "statsOutboundDownlink": true
+        }
+    },
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "outboundTag": "block",
+                "protocol": [
+                    "bittorrent"
+                ],
+                "type": "field"
+            },
+            {
+                "ip": [
+                    "8.8.8.8",
+                    "8.4.4.8",
+                    "1.1.1.1",
+                    "1.0.0.1"
+                ],
+                "domain": [
+                    "cloudflare-dns.com"
+                ],
+                "outboundTag": "proxy",
+                "port": "53",
+                "type": "field"
+            },
+            {
+                "domain": [
+                    "regexp:.*\\.ir$",
+                    "ext:iran.dat:ir",
+                    "ext:iran.dat:other",
+                    "geosite:category-ir-gov",
+                    "geosite:category-ir-news",
+                    "geosite:category-ir-bank",
+                    "geosite:category-ir-tech",
+                    "geosite:category-ir-travel",
+                    "geosite:category-ir-shopping",
+                    "geosite:category-ir-insurance",
+                    "geosite:category-ir-scholar",
+                    "geosite:category-ads-all",
+                    "snapp",
+                    "digikala",
+                    "tapsi",
+                    "blogfa",
+                    "bank",
+                    "sb24.com",
+                    "sheypoor.com",
+                    "tebyan.net",
+                    "beytoote.com",
+                    "telewebion.com",
+                    "Film2movie.ws",
+                    "Setare.com",
+                    "Filimo.com",
+                    "Torob.com",
+                    "Tgju.org",
+                    "Sarzamindownload.com",
+                    "downloadha.com",
+                    "P30download.com",
+                    "Sanjesh.org"
+                ],
+                "ip": [
+                    "geoip:private",
+                    "geoip:ir"
+                ],
+                "outboundTag": "direct",
+                "type": "field"
+            }
+        ]
+    },
+    "stats": {}
+}
