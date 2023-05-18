@@ -55,6 +55,18 @@
                 "protocol": [
                     "bittorrent"
                 ],
+                "type": "field"
+            },
+            {
+                "outboundTag": "block",
+                "ip": [
+                    "geoip:private",
+                    "geoip:ir"
+                ],
+                "type": "field"
+            },
+            {
+                "outboundTag": "block",
                 "domain": [
                     "regexp:.*\\.ir$",
                     "ext:iran.dat:ir",
@@ -67,30 +79,7 @@
                     "geosite:category-ir-shopping",
                     "geosite:category-ir-insurance",
                     "geosite:category-ir-scholar",
-                    "geosite:category-ads-all",
-                    "snapp",
-                    "digikala",
-                    "tapsi",
-                    "blogfa",
-                    "bank",
-                    "sb24.com",
-                    "sheypoor.com",
-                    "tebyan.net",
-                    "beytoote.com",
-                    "telewebion.com",
-                    "Film2movie.ws",
-                    "Setare.com",
-                    "Filimo.com",
-                    "Torob.com",
-                    "Tgju.org",
-                    "Sarzamindownload.com",
-                    "downloadha.com",
-                    "P30download.com",
-                    "Sanjesh.org"
-                ],
-                "ip": [
-                    "geoip:private",
-                    "geoip:ir"
+                    "geosite:category-ads-all"
                 ],
                 "type": "field"
             },
