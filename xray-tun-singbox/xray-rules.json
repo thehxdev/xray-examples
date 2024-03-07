@@ -1,0 +1,127 @@
+{
+    "dns": {
+        "hosts": {
+            "geosite:ads": "127.0.0.1",
+            "domain:googleapis.cn": "googleapis.com"
+        },
+        "servers": [
+            "1.1.1.1",
+            "1.0.0.1",
+            {
+                "address": "8.8.8.8",
+                "domains": [
+                    "domain:freeserver.top",
+                    "geosite:ir"
+                ],
+                "expectIPs": [
+                    "geoip:cn"
+                ],
+                "port": 53
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "enabled": true
+            },
+            "tag": "socks"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 10809,
+            "protocol": "http",
+            "tag": "http"
+        }
+    ],
+    "log": {
+        "loglevel": "warning"
+    },
+    "outbounds": [
+        {
+            // Proxy outbound
+            "tag": "proxy"
+        },
+        {
+            "protocol": "freedom",
+            "settings": {},
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+                "response": {
+                    "type": "http"
+                }
+            },
+            "tag": "block"
+        },
+        {
+            "protocol": "freedom",
+            "settings": {
+                "fragment": {
+                    "interval": "10-20",
+                    "length": "10-20",
+                    "packets": "tlshello"
+                }
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "",
+                "sockopt": {
+                    "TcpNoDelay": true,
+                    "mark": 255
+                }
+            },
+            "tag": "fragment"
+        }
+    ],
+    "routing": {
+        "domainStrategy": "AsIs",
+        "rules": [
+            {
+                "ip": [
+                    "1.1.1.1",
+                    "1.0.0.1"
+                ],
+                "port": "53",
+                "type": "field",
+                "outboundTag": "proxy"
+            },
+            {
+                "domain": [
+                    "geosite:ir"
+                ],
+                "outboundTag": "direct",
+                "type": "field"
+            },
+            {
+                "ip": [
+                    "geoip:ir",
+                    "geoip:private"
+                ],
+                "outboundTag": "direct",
+                "type": "field"
+            },
+            {
+                "domain": [
+                    "geosite:ads"
+                ],
+                "outboundTag": "block",
+                "type": "field"
+            }
+        ]
+    },
+    "stats": {}
+}
