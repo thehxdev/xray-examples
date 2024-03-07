@@ -1,0 +1,51 @@
+{
+    "log": {
+        "level": "panic"
+    },
+    "inbounds": [
+        {
+            "domain_strategy": "prefer_ipv4",
+            "endpoint_independent_nat": true,
+            "inet4_address": [
+                "172.19.0.1/28"
+            ],
+            "inet6_address": [
+                "fdfe:dcba:9876::1/126"
+            ],
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": false,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "stack": "gvisor",
+            "tag": "tun-in",
+            "type": "tun"
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "xray-out",
+            "type": "socks",
+            "server": "127.0.0.1",
+            "server_port": 10808,
+            "version": "5",
+            "udp_over_tcp": true
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "rules": [
+            {
+                "process_name": [
+                    "xray",
+                    "sing-box"
+                ],
+                "outbound": "direct"
+            }
+        ]
+    }
+}
